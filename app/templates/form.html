@@ -1,13 +1,14 @@
+{% import 'bootstrap/wtf.html' as wtf %}
 {% extends 'base.html' %}
 
 
 {% block app_content %}
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h1>Twitter</h1>
-        <img src="http://placehold.it/800x150" alt="Bruce Who?" class="banner">
-      </div> <!-- ends col-12 -->
+      <div class="col-md-4 offset-md-4">
+        <h1>{{ title }}</h1>
+        {{ wtf.quick_form(form) }}
+      </div> <!-- ends col-4 -->
     </div> <!-- ends row -->
   </div> <!-- ends container -->
 {% endblock %}
